@@ -1,0 +1,58 @@
+//TRAIGO ELEMENTOS DEL LOCALSTORAGE
+//SI NO HAY ELEMENTOS EN LOCALSTORAGE INICIO EL ARRAY VACIO
+//LOCALSTORAGE ME DA UN STRING JSON Y CON PARSE LOS HAGO OBJETOS
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+//FUNCION PARA GUARDAR EL CARRITO. CADA ELEMENTO SE GUARDA EN EL LOCALSTORAGE EN FORMATO JSON
+const guardarCarrito = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+//VARIABLES DE CONTAINERS, BOTONES, INPUTS ETC
+const prodContainer = document.querySelector(".product-grid")
+
+//FUNCION PLANTILLA INNERHTML
+const crearPlantillaProducto = (producto) => {
+    const {id, nombre, descripcion, categoria, precio, imagen, disponibilidad, valoracion} = producto;
+    return `
+    <article class="card product-card">
+        <h3>${nombre}</h3>
+        <p>
+            ${descripcion}
+        </p>
+        <img src=${imagen}></img>
+        <div class="price-line">
+            <span class="price">$${precio}</span>
+        </div>
+        <div class="price-line">
+        <span class="price">★${valoracion}</span>
+        <span class="price">${disponibilidad === "si"
+            ? "Disponible"
+            : "Agotado"
+        }</span>
+        </div>
+        <button type="button" class="btn primary"
+        data-id="${id}
+        data-nombre="${nombre}
+        data-descripcion="${descripcion}
+        data-categoria="${categoria}
+        data-precio="${precio}
+        data-imagen="${imagen}
+        data-disponibilidad="${disponibilidad}
+        data-valoracion="${valoracion}
+        ">Agregar al carrito</button>
+    </article>
+    `
+}
+
+//FUNCION RENDERIZAR
+const renderizarProductos = (listaProductos) => {
+    prodContainer.innerHTML += listaProductos.map(crearPlantillaProducto).join("")
+}
+
+//FUNCION INICIAR
+const init = () => {
+    renderizarProductos(productos)
+}
+
+init()
