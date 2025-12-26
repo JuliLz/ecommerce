@@ -7,11 +7,11 @@ Este es un proyecto de una tienda online moderna desarrollada durante mi aprendi
 
 ## 🚀 Funcionalidades Actuales
 
-- **Renderizado Dinámico:**
-- **Sistema de Paginación:**
-- **Filtrado:**
-- **Carrito de Compras (En proceso):**
-- **Persistencia con LocalStorage:**
+- **Renderizado Dinámico**
+- **Sistema de Paginación**
+- **Filtrado**
+- **Carrito de Compras (En proceso)**
+- **Persistencia con LocalStorage**
 
 ---
 
