@@ -12,6 +12,7 @@ const guardarCarrito = () => {
 const prodContainer = document.querySelector(".product-grid")
 const btnAgregarCarrito = document.querySelector(".btnAddCart")
 const btnVerMas = document.querySelector(".btnVerMas")
+const btnFiltroTodos = document.querySelector(".btnFiltroTodos")
 const btnFiltroPerifericos = document.querySelector(".btnFiltroPerifericos")
 const btnFiltroHardware = document.querySelector(".btnFiltroHardware")
 const btnFiltroMuebles = document.querySelector(".btnFiltroMuebles")
@@ -69,9 +70,30 @@ const verMasProductos = () => {
 const filtrar = (filtro) => {
     let listaProdFiltrados = []
     for (let i = 0; i < productos.length; i++) {
-        if(productos[i].categoria === filtro) {
+        if ( !filtro || productos[i].categoria === filtro) {
             listaProdFiltrados.push(productos[i])
-        } 
+        }
+    }
+    if ( filtro === "Perifericos") {
+        btnFiltroPerifericos.classList.add("active")
+        btnFiltroHardware.classList.remove("active")
+        btnFiltroMuebles.classList.remove("active")
+        btnFiltroTodos.classList.remove("active")
+    } else if (filtro === "Hardware") {
+        btnFiltroPerifericos.classList.remove("active")
+        btnFiltroHardware.classList.add("active")
+        btnFiltroMuebles.classList.remove("active")
+        btnFiltroTodos.classList.remove("active")
+    } else if (filtro === "Muebles") {
+        btnFiltroPerifericos.classList.remove("active")
+        btnFiltroHardware.classList.remove("active")
+        btnFiltroMuebles.classList.add("active")
+        btnFiltroTodos.classList.remove("active")
+    } else {
+        btnFiltroPerifericos.classList.remove("active")
+        btnFiltroHardware.classList.remove("active")
+        btnFiltroMuebles.classList.remove("active")
+        btnFiltroTodos.classList.add("active")
     }
     prodContainer.innerHTML = ""
     renderizarProductos(listaProdFiltrados)
@@ -85,6 +107,7 @@ const init = () => {
     btnFiltroPerifericos.addEventListener("click", () => { filtrar("Perifericos") })
     btnFiltroHardware.addEventListener("click", () => { filtrar("Hardware") })
     btnFiltroMuebles.addEventListener("click", () => { filtrar("Muebles") })
+    btnFiltroTodos.addEventListener("click", () => { filtrar() })
 }
 
 
