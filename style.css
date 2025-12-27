@@ -54,6 +54,15 @@ a {
   z-index: 20;
   overflow-y: auto;
   padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+.carrito-grid {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
 }
 
 .carritoHeader {

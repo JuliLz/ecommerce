@@ -40,6 +40,7 @@
             <circle cx="10" cy="19" r="1.2" fill="currentColor" />
             <circle cx="17" cy="19" r="1.2" fill="currentColor" />
           </svg>
+          <span class="carrito-cantidad"></span>
         </button>
       </div>
 
@@ -49,16 +50,16 @@
           <span class="price" style="color:white; display:flex">Tu carrito</span>
         </div>   
         <br>
-        <div class="carritoItems">
-
+        <div class="container carrito-grid">
+          <div class="carritoItems"></div>
         </div>
         <br>
         <div class="carritoFooter">
           <div class="totalPrice">
-            <span class="price" style="color:white; display:flex">Total:</span>
-            <span class="price" style="color:white; display:flex"></span>
+            <span class="price carrito-total" style="color:white; display:flex">Total:</span>
           </div>
           <button type="button" class="btnComprar btn primary">Comprar</button>
+          <button type="button" class="btnVaciarCarrito btn secondary">Vaciar carrito</button>
         </div>
       </div>
       

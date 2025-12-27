@@ -7,7 +7,7 @@ const productos = [
     precio: 8500,
     imagen: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.8
+    valoracion: 4.8,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const productos = [
     precio: 4200,
     imagen: "https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.5
+    valoracion: 4.5,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const productos = [
     precio: 12000,
     imagen: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "no",
-    valoracion: 4.9
+    valoracion: 4.9,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const productos = [
     precio: 2500,
     imagen: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80",
     disponibilidad: "si",
-    valoracion: 4.2
+    valoracion: 4.2,
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const productos = [
     precio: 45000,
     imagen: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.7
+    valoracion: 4.7,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const productos = [
     precio: 7800,
     imagen: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
     disponibilidad: "si",
-    valoracion: 3.9
+    valoracion: 3.9,
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const productos = [
     precio: 6300,
     imagen: "https://images.unsplash.com/photo-1706970454339-e262d7db3244?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     disponibilidad: "no",
-    valoracion: 4.0
+    valoracion: 4.0,
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const productos = [
     precio: 9500,
     imagen: "https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.6
+    valoracion: 4.6,
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const productos = [
     precio: 35000,
     imagen: "https://images.unsplash.com/photo-1612011213721-3936d387f318?q=80&w=638&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     disponibilidad: "si",
-    valoracion: 4.4
+    valoracion: 4.4,
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ const productos = [
     precio: 250000,
     imagen: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=80",
     disponibilidad: "si",
-    valoracion: 4.9
+    valoracion: 4.9,
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ const productos = [
     precio: 15000,
     imagen: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80",
     disponibilidad: "si",
-    valoracion: 4.7
+    valoracion: 4.7,
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ const productos = [
     precio: 18500,
     imagen: "https://images.pexels.com/photos/4581902/pexels-photo-4581902.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.3
+    valoracion: 4.3,
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ const productos = [
     precio: 8200,
     imagen: "https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "si",
-    valoracion: 4.1
+    valoracion: 4.1,
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ const productos = [
     precio: 14500,
     imagen: "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&w=800",
     disponibilidad: "no",
-    valoracion: 4.5
+    valoracion: 4.5,
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ const productos = [
     precio: 22000,
     imagen: "https://images.unsplash.com/photo-1716062890647-60feae0609d0?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     disponibilidad: "si",
-    valoracion: 4.6
+    valoracion: 4.6,
   },
   {
     id: 16,
@@ -157,17 +157,17 @@ const productos = [
     precio: 35000,
     imagen: "https://images.unsplash.com/photo-1612011213721-3936d387f318?q=80&w=638&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     disponibilidad: "si",
-    valoracion: 4.4
+    valoracion: 4.4,
   },
   {
     id: 17,
-    nombre: "Silla Gamer ErgoRed",
+    nombre: "Silla Gamer ErgoRed v2",
     descripcion: "Ergonomía superior con almohadillas lumbares, reclinable hasta 180 grados.",
     categoria: "Muebles",
     precio: 35000,
     imagen: "https://images.unsplash.com/photo-1612011213721-3936d387f318?q=80&w=638&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     disponibilidad: "si",
-    valoracion: 4.4
+    valoracion: 4.4,
   },
 ];
 
@@ -182,11 +182,11 @@ const setearCantidad = (tamañoPagina) => {
 }
 
 //TOMAR ITEMS EN LOCALSTORAGE O ARRAY VACIO
-let listaProductos = JSON.parse(localStorage.getItem("carrito")) || []
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
 //GUARDAR EN LOCALSTORAGE
-const guardarEnLocalStorage = (listaProductos) => {
-  localStorage.setItem("carrito", JSON.stringify(listaProductos))
+const guardarEnLocalStorage = (carrito) => {
+  localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
 const appState = {

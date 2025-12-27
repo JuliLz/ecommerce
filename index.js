@@ -1,8 +1,3 @@
-//TRAIGO ELEMENTOS DEL LOCALSTORAGE
-//SI NO HAY ELEMENTOS EN LOCALSTORAGE INICIO EL ARRAY VACIO
-//LOCALSTORAGE ME DA UN STRING JSON Y CON PARSE LOS HAGO OBJETOS
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
 //VARIABLES DE CONTAINERS, BOTONES, INPUTS ETC
 const prodContainer = document.querySelector(".product-grid")
 const btnAgregarCarrito = document.querySelector(".btnAddCart")
@@ -15,6 +10,10 @@ const btnCarrito = document.querySelector(".cart-btn")
 const carritoContainer = document.querySelector(".carrito")
 const btnCerrarCarrito = document.querySelector(".btnCerrarCarrito")
 const carritoContainerItems = document.querySelector(".carritoItems")
+const carritoTotalSpan = document.querySelector(".carrito-total")
+const carritoCantidadSpan = document.querySelector(".carrito-cantidad")
+const btnComprar = document.querySelector(".btnComprar")
+const btnVaciarCarrito = document.querySelector(".btnVaciarCarrito")
 
 //FUNCION PLANTILLA INNERHTML
 const crearPlantillaProducto = (producto) => {
@@ -118,15 +117,56 @@ const cerrarCarrito = (e) => {
 const agregarAlCarrito = () => { 
 }
 
+//FUNCION PLANTILLA CARRITO
+const crearPlantillaCarrito = (producto) => {
+    const {id, nombre, precio, imagen, cantidad} = producto;
+    return `
+        <article class="card product-card">
+            <h3>${nombre}</h3>
+            <img src=${imagen}></img>
+            <div class="price-line">
+                <span class="price">$${precio}</span>
+            </div>
+            <button type="button" class="btn secondary"
+            data-id="${id}
+            ">+</button>
+            <span class="price">${cantidad}</span>
+            <button type="button" class="btn secondary"
+            data-id="${id}
+            ">-</button>
+            <span class="price">Disponibles: ${cantidad}</span>
+        </article>
+       ` 
+}
+
 //FUNCION RENDERIZAR CARRITO
 const renderizarCarrito = () => {
     if (!carrito.length) {
         carritoContainerItems.innerHTML = `<span class="price" style="color:white; display:flex">No hay productos</span>`
-    } else {
-        carritoContainerItems.innerHTML = `
-        
-        `
+        return
     }
+    carritoContainerItems.innerHTML = carrito.map((producto) => {
+        crearPlantillaCarrito(producto).join("")
+    })
+}
+
+//OBTENER TOTAL DEL CARRITO
+const obtenerTotalCarrito = () => {
+    return carrito.reduce((acumulador, producto) => {
+        acumulador + Number(producto.precio) * producto.cantidad
+    }, 0)
+}
+
+//FUNCION MOSTRAR PRECIO CARRITO
+const mostrarTotalCarrito = () => {
+    carritoTotalSpan.innerHTML = `Total $${obtenerTotalCarrito().toFixed(2)}`
+}
+
+//FUNCION MOSTRAR CANTIDAD CARRITO
+const mostrarCantidadItemsCarrito = () => {
+    carritoCantidadSpan.textContent = carrito.reduce((acumulador, producto) => {
+        acumulador + producto.cantidad
+    }, 0)
 }
 
 //FUNCION INICIAR
@@ -140,6 +180,8 @@ const init = () => {
     btnCarrito.addEventListener("click", abrirCarrito)
     btnCerrarCarrito.addEventListener("click", cerrarCarrito)
     document.addEventListener("DOMContentLoaded", renderizarCarrito)
+    document.addEventListener("DOMContentLoaded", mostrarTotalCarrito)
+    document.addEventListener("DOMContentLoaded", mostrarCantidadItemsCarrito)
 }
 
 
