@@ -290,6 +290,7 @@ const actualizarCarrito = () => {
     obtenerTotalCarrito()
     mostrarCantidadItemsCarrito()
     mostrarTotalCarrito()
+    guardarEnLocalStorage(carrito)
 }
 
 //FUNCION INICIAR
@@ -307,6 +308,9 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", mostrarTotalCarrito)
     document.addEventListener("DOMContentLoaded", mostrarCantidadItemsCarrito)
     prodContainer.addEventListener("click", agregarAlCarrito)
+    carritoContainer.addEventListener("click", (e) => {
+        e.stopPropagation()
+    })
     carritoContainer.addEventListener("click", manejarCantidad)
     carritoContainer.addEventListener("click", manejarBotonesCarrito)
 }

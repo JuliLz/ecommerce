@@ -1,6 +1,6 @@
 # 🛒 E-Commerce App - JS Vanilla
 
-### Proyecto en Desarrollo 🚧
+### Proyecto Finalizado
 Este es un proyecto de una tienda online moderna desarrollada durante mi aprendizaje de tecnologías web. Se enfoca en la manipulación dinámica del DOM, manejo de estados en JavaScript puro y persistencia de datos.
 
 ---
@@ -10,8 +10,8 @@ Este es un proyecto de una tienda online moderna desarrollada durante mi aprendi
 - **Renderizado Dinámico**
 - **Sistema de Paginación**
 - **Filtrado**
-- **Carrito de Compras (En proceso)**
-- **Persistencia con LocalStorage**
+- **Carrito de Compras**
+- **Persistencia**
 
 ---
 
@@ -32,12 +32,4 @@ Este es un proyecto de una tienda online moderna desarrollada durante mi aprendi
 * `data.js`: Base de datos local con el catálogo de productos.
 * `index.js`: Lógica principal y manejadores de eventos.
 
----
-
-## 🔧 Próximos Pasos
-
-- [ ] Implementar lógica de suma de precios en el carrito.
-- [ ] Agregar funcionalidad para aumentar/disminuir cantidades de productos.
-- [ ] Finalizar el proceso de Checkout.
-- [ ] Responsive Design total para dispositivos móviles.
 

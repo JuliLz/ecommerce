@@ -41,8 +41,6 @@ body {
 
 body.no-scroll {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 a {
@@ -393,8 +391,9 @@ a {
 
 .product-card {
   display: grid;
-
+  grid-template-rows: auto 1fr auto auto auto;
   gap: 0.8rem;
+  height: 100%;
 }
 
 .product-card img {
@@ -522,6 +521,14 @@ a {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 
   gap: 0.6rem;
+
+  transition: none !important;
+  transform: none !important;
+}
+
+.carrito .product-card:hover {
+  transform: none !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* Título */
@@ -589,7 +596,14 @@ a {
 
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  transition: background 160ms ease, transform 160ms ease;
+  cursor: pointer;
+}
+
+.carrito .btn.btnSumarUno:hover,
+.carrito .btn.btnSumarUno:active,
+.carrito .btn.btnSumarUno:focus {
+  background: #1a1a1a;
+  transform: none;
 }
 
 .carrito .btn.btnRestarUno {
@@ -609,7 +623,14 @@ a {
 
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  transition: background 160ms ease, transform 160ms ease;
+  cursor: pointer;
+}
+
+.carrito .btn.btnRestarUno:hover,
+.carrito .btn.btnRestarUno:active,
+.carrito .btn.btnRestarUno:focus {
+  background: #1a1a1a;
+  transform: none;
 }
 
 /* Cantidad */
