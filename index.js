@@ -226,7 +226,7 @@ const crearDataProductoCarrito = (producto) => {
 const crearPlantillaCarrito = (producto) => {
     const {id, nombre, precio, imagen, cantidad} = producto;
     return `
-        <article class="card product-card" style="width:300px">
+        <article class="card product-card">
             <h3>${nombre}</h3>
             <img src=${imagen}></img>
             <div class="price-line">
@@ -238,13 +238,14 @@ const crearPlantillaCarrito = (producto) => {
             <button type="button" class="btn secondary btnRestarUno"
             data-id="${id}">-</button>
         </article>
+        <br>
        ` 
 }
 
 //FUNCION RENDERIZAR CARRITO
 const renderizarCarrito = () => {
     if (!carrito.length) {
-        carritoContainerItems.innerHTML = `<span class="price" style="color:white; display:flex">No hay productos</span>`
+        carritoContainerItems.innerHTML = `<span class="price" style="color:var(--text); display:flex">No hay productos</span>`
         return
     }
     carritoContainerItems.innerHTML = carrito.map((producto) => {
